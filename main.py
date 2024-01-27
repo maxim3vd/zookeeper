@@ -1,9 +1,10 @@
 from animals import animals
 
-user_input = input("Please enter the number of the habitat you would like to view: ")
-habitat_number = int(user_input)
+exit_program = False
 
-if 0 <= habitat_number < len(animals):
-    print(animals[habitat_number])
+while not exit_program:
+    user_input = input("Please enter the number of the habitat you would like to view: ")
+    habitat_number = int(user_input)
 
-print("---\nYou've reached the end of the program. To check another habitat, please restart the watcher.")
+    if 0 <= habitat_number < len(animals):
+        print(animals[habitat_number])
